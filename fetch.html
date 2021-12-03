@@ -1,15 +1,26 @@
 <!doctype html>
 <html>
   <body>
-    <input type="button" value="fetch_old" onclick="
-    alert('hi');
-    ">
-    <br>
+    <article>
+
+    </article>
+
+
 
     <input type="button" value="fetch" onclick="
-      fetch('css').then(function(response){
+      fetch('html').then(function(response){
         response.text().then(function(text){
           alert(text);
+        })
+      })
+    ">
+
+
+    <input type="button" value="fetch2" onclick="
+      fetch('html').then(function(response){
+        response.text().then(function(text){
+          alert(text);
+          document.querySelector('article').innerHTML = text;
         })
       })
     ">
