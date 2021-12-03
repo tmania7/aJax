@@ -7,22 +7,36 @@
 
 
 
-    <input type="button" value="fetch" onclick="
+    <!-- <input type="button" value="fetch" onclick="
       fetch('html').then(function(response){
         response.text().then(function(text){
           alert(text);
         })
       })
-    ">
+    "> -->
 
 
-    <input type="button" value="fetch2" onclick="
+    <!-- <input type="button" value="fetch2" onclick="
       fetch('html').then(function(response){
         response.text().then(function(text){
-           document.querySelector('article').innerHTML = text;
+          document.querySelector('article').innerHTML = text;
         })
       })
+    "> -->
+
+    <input type="button" value="fetch2" onclick="
+     /*
+      fetch('html').then(function(response){
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+      */
+
+      fetch('html');
     ">
+
+
 
   </body>
 </html>
