@@ -7,31 +7,53 @@
 
 
 
-    <!-- <input type="button" value="fetch" onclick="
+    <input type="button" value="fetch" onclick="
       fetch('html').then(function(response){
         response.text().then(function(text){
           alert(text);
         })
       })
-    "> -->
+    ">
 
 
-    <!-- <input type="button" value="fetch2" onclick="
+    <input type="button" value="fetch2" onclick="
       fetch('html').then(function(response){
         response.text().then(function(text){
           document.querySelector('article').innerHTML = text;
         })
       })
-    "> -->
+    ">
+
+
+ /*
 
     <input type="button" value="fetch" onclick="
-     fetch('html').then(fuction(response){
+
+      fetch('html').then(function(response){
+        response.text().then(function(text){
+          document.querySelector('article').innerHTML = text;
+        })
+      })
+
+      fetch('html');    // 서버에 파일 요청 , 테스트1
+
+      // Asynchronous ,  테스트2
+      function callbackme(){
+        console.log('response end');
+      }
+      fetch('html').then(callbackme);
+
+
+      // 익명함수로 처리 ,  테스트3 , response 객체지정
+      fetch('html').then(fuction(response){
         console.log(response);
       });
 
       console.log(1);
       console.log(2);
     ">
+
+    */
 
   </body>
 </html>
