@@ -41,19 +41,19 @@
       var items = text.split(',')
       // console.log(items);
       var i = 0;
+      var tags = '';
       while(i < items.length){
         var item = items[i];
         // <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
         //console.log(item);
         var tag = '<li>'+item+'</li>';
         console.log(tag);
+        tags = tags + tag;
         i = i + 1;
 
       }
-
-
-
-      document.querySelector('#nav').innerHTML = text;
+      //console.log(items);
+      document.querySelector('#nav').innerHTML = tags;
     })
   });
 
