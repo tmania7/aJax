@@ -30,7 +30,8 @@
   if(location.hash){
     fetchPage(location.hash.substr(2));
   } else{
-    fetchPage('welcome');
+    //fetchPage('welcome');
+    fetchPage(location.hash.substr(1));
   }
 
   fetch('list').then(function(response){
