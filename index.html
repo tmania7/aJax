@@ -35,7 +35,7 @@
 
   fetch('list').then(function(response){
     response.text().then(function(text){
-      document.querySelector('nav').innerHTML = text;
+      document.querySelector('#nav').innerHTML = text;
     })
   });
 
