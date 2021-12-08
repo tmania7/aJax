@@ -36,10 +36,23 @@
 
   fetch('list').then(function(response){
     response.text().then(function(text){
-      // <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
       console.log(text);
+
       var items = text.split(',')
-      console.log(items);
+      // console.log(items);
+      var i = 0;
+      while(i < items.length){
+        var item = items[i];
+        // <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
+        //console.log(item);
+        var tag = '<li>'+item+'</li>';
+        console.loog(tag);
+        i = i + 1;
+
+      }
+
+
+
       document.querySelector('#nav').innerHTML = text;
     })
   });
