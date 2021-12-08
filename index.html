@@ -38,7 +38,7 @@
     response.text().then(function(text){
       // <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
       console.log(text);
-      var items =text.splist(',')
+      var items = text.split(',')
       console.log(itmes)
       document.querySelector('#nav').innerHTML = text;
     })
