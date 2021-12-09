@@ -7,14 +7,12 @@
   <script src="colors.js"></script>
 </head>
 <body>
-  <h1><a href="#welcome">WEB</a></h1>
+  <h1><a href="#!welcome">WEB</a></h1>
   <input id="night_day" type="button" value="night" onclick="
     nightDayHandler(this);
   ">
-  <ol>
-    <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
-    <li><a href="#!css" onclick="fetchPage('css')">CSS</a></li>
-    <li><a href="#!javascript" onclick="fetchPage('javascript')">JavaScript</a></li>
+  <ol id="nav">
+
   </ol>
   <article>
 
@@ -32,8 +30,34 @@
   if(location.hash){
     fetchPage(location.hash.substr(2));
   } else{
+    //fetchPage('welcome');
     fetchPage('welcome');
   }
+
+  fetch('list').then(function(response){
+    response.text().then(function(text){
+      //console.log(text);
+
+      var items = text.split(',')
+      // console.log(items);
+      var i = 0;
+      var tags = '';
+      while(i < items.length){
+        var item = items[i];
+        item = item.trim();   // how to clean whitespace in staring. 마지막 배열값에 공백 제거
+        // <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
+        //console.log(item);
+        //var tag = '<li>'+item+'</li>';
+        var tag = '<li><a href = "#!'+item+'" onclick="fetchPage(\''+item+'\')">'+item+'</a></li>';
+        //console.log(tag);
+        tags = tags + tag;
+        i = i + 1;
+
+      }
+      // console.log(items);
+      document.querySelector('#nav').innerHTML = tags;
+    })
+  });
 
   </script>
 </body>
