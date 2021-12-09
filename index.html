@@ -47,10 +47,10 @@
         var item = items[i];
         item = item.trim();   // how to clean whitespace in staring. 마지막 배열값에 공백 제거
         // <li><a href="#!html" onclick="fetchPage('html')">HTML</a></li>
-        console.log(item);
+        //console.log(item);
         //var tag = '<li>'+item+'</li>';
         var tag = '<li><a href = "#!'+item+'" onclick="fetchPage(\''+item+'\')">'+item+'</a></li>';
-        //console.log(tag);
+        console.log(tag);
         tags = tags + tag;
         i = i + 1;
 
