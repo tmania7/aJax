@@ -28,8 +28,8 @@
     });
   }
   if(location.hash){
+    console.log(location.hash)
     fetchPage(location.hash.substr(2));
-    console.log(location.hash);
   } else{
     //fetchPage('welcome');
     fetchPage('welcome');
