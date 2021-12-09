@@ -27,7 +27,7 @@
       })
     });
   }
-  if(location.hash){
+  if(location.hash ==='welcome'){
     fetchPage(location.hash.substr(2));
   } else{
     //fetchPage('welcome');
@@ -54,7 +54,7 @@
         i = i + 1;
 
       }
-      console.log(items);
+      // console.log(items);
       document.querySelector('#nav').innerHTML = tags;
     })
   });
