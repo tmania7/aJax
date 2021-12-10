@@ -23,12 +23,7 @@
     display: grid;
     grid-template-columns: 150px 1fr;
   }
-  ol{
-    border-right: 1px solid gray;
-    width:100px;
-    margin:0;
-    padding: 20px;
-  }
+  
   #grid #article{
     padding-left:25px;
   }
